@@ -34,6 +34,15 @@
             border-radius: 50px;
             border: 2px solid rgb(0, 0, 0);
         }
+
+        span{
+            font-size: 20px;
+        }
+
+        a{
+            color:white;
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -42,12 +51,12 @@
         <div class="row">
             <div class="col-md-12 mb-4">
                 <div class="card bg-transparent text-center border border-light p-5">
-                    <h2 class="mb-4 text-light fw-bold">Cek Khodam by Ramadhan</h2>
+                    <h2 class="mb-4 text-light fw-bold">Cek Khodam Kamu disini <br><span>created by <a href="https://www.instagram.com/rmdhnrzs">@Rmdhnrzs</a></span></h2>
                     <div class="input-group mb-5">
                         <input type="text" class="form-control border border-info" id="nama"
                             placeholder="Masukkan nama kamu" aria-label="Nama">
-                        <button class="btn btn-info text-light fw-bold" type="button" onclick="cek_khodam()">Cek
-                            Khodam</button>
+                        <button class="btn btn-info text-light fw-bold" type="button"
+                            onclick="cek_khodam()">Cek</button>
                     </div>
                     <h4 class="text-light fw-bold">Khodam Kamu Adalah :</h4>
                     <h2 id="hasil">--</h2>
