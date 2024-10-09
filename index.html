@@ -20,11 +20,27 @@
             height: 100vh;
             width: 100vw;
             margin: 0;
+            backdrop-filter: blur(5px);
         }
 
         .card {
             border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.672);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         #hasil {
@@ -33,15 +49,33 @@
             background-color: white;
             border-radius: 50px;
             border: 2px solid rgb(0, 0, 0);
+            transition: transform 0.5s ease, opacity 0.5s ease;
         }
 
-        span{
+        span {
             font-size: 20px;
         }
 
-        a{
-            color:white;
+        a {
+            color: white;
             text-decoration: underline;
+        }
+
+        .btn {
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+        .form-control {
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+            border-color: #007bff;
         }
     </style>
 </head>
@@ -67,7 +101,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+   <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
